@@ -11,13 +11,15 @@ const TabButton = ({ active, selectTab, children }) => {
 
   return (
     <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+      <p
+        className={`mr-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#80CBC4] to-[#FFF9E6] ${buttonClasses}`}
+      >
         {children}
       </p>
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-1 bg-primary-500 mt-2 mr-3"
+        className="h-1 bg-slate-800 mt-2 mr-3"
       ></motion.div>
     </button>
   );

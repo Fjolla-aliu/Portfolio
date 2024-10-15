@@ -8,14 +8,29 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
+      <div className="flex space-x-4">
+        <ul className="list-disc pl-2">
+          <li>ReactJS</li>
+          <li>NextJS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>VueJS</li>
+        </ul>
+        <ul className="list-disc pl-6">
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Java</li>
+          <li>Asp.Net Core</li>
+          <li>PHP</li>
+        </ul>
+        <ul className="list-disc pl-4">
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>Microsoft SQL</li>
+          <li>Firebase</li>
+          <li>Git</li>
+        </ul>
+      </div>
     ),
   },
   {
@@ -23,8 +38,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>UBT - University for Business and Technology, Kosovo</li>
+        <li>Computer Science & Engineering</li>
       </ul>
     ),
   },
@@ -33,8 +48,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>BIT Academy - Youth Online and Upward</li>
+        <li>ReactJS Advanced</li>
       </ul>
     ),
   },
@@ -52,25 +67,43 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="md:grid md:grid-cols-2 gap-8  py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/images/about-image.png" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full  text-gray-200">
+          <h2 className="text-4xl font-bold w-fit mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#80CBC4] to-[#FFF9E6]">
+            About Me
+          </h2>
+          <p className="text-base lg:text-lg leading-3">
+            I am a Software Developer with a strong focus on both front-end and
+            back-end technologies. I specialize in creating interactive,
+            responsive, and dynamic web applications using modern frameworks and
+            tools.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <p className="text-base lg:text-lg leading-3">
+            My expertise spans across
+            <b> ReactJS, NextJS, JavaScript, TypeScript </b>
+            and <b>VueJS</b> on the front-end, while on the back-end I work with
+            technologies like{" "}
+            <b>
+              NodeJS, ExpressJS, Java, Asp.Net Core (Entity Framework and MS
+              SQL)
+            </b>
+            and <b>PHP</b>. In addition to my core web development skills, I am
+            experienced in database management using{" "}
+            <b>MongoDB, MySQL, Microsoft SQL, and Firebase</b>. I am proficient
+            in <b>Git</b> and experienced with <b>WordPress</b> for content
+            management.
+          </p>
+          <p className="text-base lg:text-lg leading-3">
+            A quick learner, I am always eager to grow my skills and thrive in
+            collaborative environments to create innovative web applications.
+          </p>
+          <div className="flex flex-row justify-start mt-8 gap-4">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Skills{" "}
+              Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}

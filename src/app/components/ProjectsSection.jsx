@@ -7,55 +7,81 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
+    title: "Jobify",
+    description:
+      "A job searching and posting platform for users and companies to connect with potential candidates and job opportunities.Technologies: ReactJS, NextJS, MySQL, MongoDB, TailwindCSS, NodeJS, ExpressJS",
+    image: "/images/projects/pr1.2.png",
+    galleryImages: [
+      "/images/projects/pr1.1.png",
+      "/images/projects/pr1.2.png",
+      "/images/projects/pr1.3.png",
+      "/images/projects/pr1.4.png",
+      "/images/projects/pr1.5.png",
+      "/images/projects/pr1.6.png",
+    ],
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "Alumni Association",
+    galleryImages: ["/images/projects/pr2.1.png", "/images/projects/pr2.2.png"],
+
+    description:
+      "A platform that helps students find study abroad opportunities, including accommodation, job placements, and university info. Technologies: ReactJS, .NET, MSSQL",
+    image: "/images/projects/pr2.1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "E-commerce VirtualMeds",
+    description:
+      "An e-commerce platform for online medication shopping, providing users with an accessible way to purchase their medications. Technologies: WordPress, MySQL",
     image: "/images/projects/3.png",
+    galleryImages: [],
+
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    title: "Skincare line site - HonestCo",
+    description:
+      "An interactive platform for showcasing skincare products tailored to different skin types, enabling users to easily explore and discover new items. Technologies: HTML, CSS, JavaScript, PHP.",
+    image: "/images/projects/pr3.1.png",
+    galleryImages: [
+      "/images/projects/pr3.1.png",
+      "/images/projects/pr3.2.png",
+      "/images/projects/pr3.3.png",
+    ],
+    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "Skincare line - VersedCo",
+    description:
+      "An interactive e-commerce platform for skincare products tailored to various skin types, featuring a visually appealing UI and enhanced user experience. Technologies: Vue.js, Node.js, HTML, CSS.",
     image: "/images/projects/5.png",
+    galleryImages: [],
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
+    title: "Angry Birds Clone",
+    video: true,
+    description:
+      "Developed a physics-based game using Unity, inspired by the classic Angry Birds. The project features engaging gameplay mechanics, vibrant graphics, and various levels, showcasing my skills in game design and development.",
+    image: "/images/projects/202151031-FjollaAliu.mp4",
+    galleryImages: [],
+    tag: ["All", "Game"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -97,9 +123,14 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
+          name="Game"
+          isSelected={tag === "Game"}
+        />
+        {/* <ProjectTag
+          onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
-        />
+        /> */}
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
@@ -115,6 +146,8 @@ const ProjectsSection = () => {
               title={project.title}
               description={project.description}
               imgUrl={project.image}
+              galleryImages={project?.galleryImages}
+              video={project?.video}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />
