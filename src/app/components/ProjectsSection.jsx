@@ -40,8 +40,12 @@ const projectsData = [
     title: "E-commerce VirtualMeds",
     description:
       "An e-commerce platform for online medication shopping, providing users with an accessible way to purchase their medications. Technologies: WordPress, MySQL",
-    image: "/images/projects/3.png",
-    galleryImages: [],
+    image: "/images/projects/pr4.1.png",
+    galleryImages: [
+      "/images/projects/pr4.1.png",
+      "/images/projects/pr4.2.png",
+      "/images/projects/pr4.3.png",
+    ],
 
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -52,11 +56,11 @@ const projectsData = [
     title: "Skincare line site - HonestCo",
     description:
       "An interactive platform for showcasing skincare products tailored to different skin types, enabling users to easily explore and discover new items. Technologies: HTML, CSS, JavaScript, PHP.",
-    image: "/images/projects/pr3.1.png",
+    image: "/images/projects/pr3.1.1.png",
     galleryImages: [
-      "/images/projects/pr3.1.png",
+      "/images/projects/pr3.1.1.png",
       "/images/projects/pr3.2.png",
-      "/images/projects/pr3.3.png",
+      "/images/projects/pr3.4.png",
     ],
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -67,8 +71,12 @@ const projectsData = [
     title: "Skincare line - VersedCo",
     description:
       "An interactive e-commerce platform for skincare products tailored to various skin types, featuring a visually appealing UI and enhanced user experience. Technologies: Vue.js, Node.js, HTML, CSS.",
-    image: "/images/projects/5.png",
-    galleryImages: [],
+    image: "/images/projects/pr5.2.png",
+    galleryImages: [
+      "/images/projects/pr5.2.png",
+      "/images/projects/pr5.1.png",
+      "/images/projects/pr5.3.png",
+    ],
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",

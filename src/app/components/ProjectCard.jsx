@@ -101,26 +101,26 @@ const ProjectCard = ({
       </div>
       {showGallery && (
         <div
-          className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black  bg-opacity-70 flex items-center justify-center"
           // onClick={toggleGallery}
         >
           <div
             ref={modalRef}
-            className="bg-[#181818] p-4 rounded-lg z-30 max-w-2xl w-full"
+            className="bg-[#181818] relative p-4 rounded-lg z-30 h-[95%] max-w-2xl w-full"
           >
-            <div className="flex justify-end w-full">
-              <button onClick={toggleGallery} className="text-white mb-4 ">
+            <div className="flex justify-end absolute top-4 right-4 ">
+              <button onClick={toggleGallery} className="text-white  ">
                 <XMarkIcon className=" w-6 h-6 flex" />
               </button>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center h-[80%] justify-between">
               <button onClick={prevImage} className="text-white">
                 <ArrowLeftIcon className=" w-6 h-6 flex" />
               </button>
               <img
                 src={galleryImages[currentIndex]}
                 alt={`Gallery image ${currentIndex + 1}`}
-                className="w-[90%] h-auto rounded-lg"
+                className="w-[90%] h-full object-contain rounded-lg"
               />
               <button onClick={nextImage} className="text-white">
                 <ArrowRightIcon className=" w-6 h-6 flex" />
@@ -132,7 +132,7 @@ const ProjectCard = ({
                   key={index}
                   src={img}
                   alt={`Thumbnail ${index + 1}`}
-                  className={`w-full h-full rounded-lg cursor-pointer ${
+                  className={`w-full rounded-lg h-20 md:h-28 object-cover cursor-pointer ${
                     currentIndex === index ? "border-2 border-green-500" : ""
                   }`}
                   onClick={() => setCurrentIndex(index)}

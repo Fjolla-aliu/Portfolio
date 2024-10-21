@@ -39,7 +39,9 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>UBT - University for Business and Technology, Kosovo</li>
-        <li>Computer Science & Engineering</li>
+        <li className="list-none" style={{ textDecoration: "none" }}>
+          <p>Computer Science & Engineering</p>
+        </li>
       </ul>
     ),
   },
@@ -48,8 +50,10 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>BIT Academy - Youth Online and Upward</li>
-        <li>ReactJS Advanced</li>
+        <li>
+          BIT Academy - Youth Online and Upward <br />
+          ReactJS Advanced
+        </li>
       </ul>
     ),
   },
@@ -73,13 +77,13 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold w-fit mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#80CBC4] to-[#FFF9E6]">
             About Me
           </h2>
-          <p className="text-base lg:text-lg leading-3">
+          <p className="text-base md:text-lg leading-5">
             I am a Software Developer with a strong focus on both front-end and
             back-end technologies. I specialize in creating interactive,
             responsive, and dynamic web applications using modern frameworks and
             tools.
           </p>
-          <p className="text-base lg:text-lg leading-3">
+          <p className="text-base md:text-lg leading-5">
             My expertise spans across
             <b> ReactJS, NextJS, JavaScript, TypeScript </b>
             and <b>VueJS</b> on the front-end, while on the back-end I work with
@@ -94,7 +98,7 @@ const AboutSection = () => {
             in <b>Git</b> and experienced with <b>WordPress</b> for content
             management.
           </p>
-          <p className="text-base lg:text-lg leading-3">
+          <p className="text-base md:text-lg leading-5">
             A quick learner, I am always eager to grow my skills and thrive in
             collaborative environments to create innovative web applications.
           </p>
